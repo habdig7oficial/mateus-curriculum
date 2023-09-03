@@ -7,8 +7,6 @@ import NavBar from "@/components/NavBar.vue";
 import Modal from "@/components/Modal.vue";
 import Footer from "@/components/Footer.vue"
 
-console.log(Languages)
-
 import type { carousel } from "@/components/Carousel.vue";
 
 interface carousels {
@@ -16,11 +14,22 @@ interface carousels {
   back: Array<carousel>,
   performance: Array<carousel>,
   db: Array<carousel>,  
+  game_dev: Array<carousel>,  
 }
 
-let carouselObj: carousels = { front: [], back: [], performance: [], db: []}
+
+let Areas: Array<string> = [
+  "Frontend (Web)",
+  "Backend (Web)",
+  "Database",
+  "High Performance Apps",
+  "Game Development",
+]
+
+let carouselObj: carousels = { front: [], back: [], performance: [], db: [], game_dev: []}
 
 for (let i = 0; i < Languages.length; i++) {
+  
   if (Languages[i].used_for.includes("Frontend (Web)")) {
     carouselObj.front?.push({
       title: Languages[i].name,
@@ -53,17 +62,19 @@ for (let i = 0; i < Languages.length; i++) {
     })
   }
 
+  if (Languages[i].used_for.includes("Game Development")) {
+    carouselObj.game_dev?.push({
+      title: Languages[i].name,
+      subtitle: Languages[i].name,
+      image: Languages[i].logo,
+    })
+  }
+
 }
+
 console.log(carouselObj)
 
 
-let Areas: Array<string> = [
-  "Frontend (Web)",
-  "Backend (Web)",
-  "Database",
-  "High Performance Apps",
-  "Game Development",
-]
 let selected_area: Ref<number> = ref(0);
 
 </script>
@@ -112,6 +123,13 @@ let selected_area: Ref<number> = ref(0);
       <div v-show="selected_area == Areas.indexOf('High Performance Apps')" id="langs">
         <div class="d-flex justify-content-center">
           <Carousel carousel_id="performace" :carousel="carouselObj.performance" />
+        </div>
+      </div>
+    </Transition>
+    <Transition name="slide-fade">
+      <div v-show="selected_area == Areas.indexOf('Game Development')" id="langs">
+        <div class="d-flex justify-content-center">
+          <Carousel carousel_id="game_dev" :carousel="carouselObj.game_dev" />
         </div>
       </div>
     </Transition>

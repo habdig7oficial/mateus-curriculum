@@ -1,0 +1,32 @@
+
+  if (Languages[i].used_for.includes("Backend (Web)")) {
+    carouselObj.back?.push({
+      title: Languages[i].name,
+      subtitle: Languages[i].name,
+      image: Languages[i].logo,
+    })
+  }
+
+  if (Languages[i].used_for.includes("Database")) {
+    carouselObj.db?.push({
+      title: Languages[i].name,
+      subtitle: Languages[i].name,
+      image: Languages[i].logo,
+    })
+  }
+
+  if (Languages[i].used_for.includes("High Performance Apps")) {
+    carouselObj.performance?.push({
+      title: Languages[i].name,
+      subtitle: Languages[i].name,
+      image: Languages[i].logo,
+    })
+  }
+
+  if (Languages[i].used_for.includes("Game Development")) {
+    carouselObj.ga?.push({
+      title: Languages[i].name,
+      subtitle: Languages[i].name,
+      image: Languages[i].logo,
+    })
+  }

@@ -14,6 +14,12 @@ let languages: Array<langs> = [
         used_for: [ "High Performance Apps" ]
     },
     {
+        name: "C#",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+        learning_type: "",
+        used_for: [ "Game Development" ]
+    },
+    {
         name: "Clojure",
         logo: "https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg",
         learning_type: "",
