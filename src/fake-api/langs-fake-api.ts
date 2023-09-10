@@ -16,7 +16,7 @@ let languages: Array<langs> = [
     {
         name: "C#",
         logo: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
-        learning_type: "",
+        learning_type: "FIAP School - Programming Language & Game Developement (1º and 3º year of hight school)",
         used_for: [ "Game Development" ]
     },
     {
@@ -34,20 +34,20 @@ let languages: Array<langs> = [
     {
         name: "TypeScript",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
-        learning_type: "",
+        learning_type:  "FIAP School - Programming Language (3º year of hight school)",
         used_for: [ "Frontend (Web)", "Backend (Web)" ]
         
     },
     {
         name: "JavaScript",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
-        learning_type: "",
+        learning_type: "FIAP School - Internet and Web & Programming Language (1º, 2º, 3º year of hight school)",
         used_for: [ "Frontend (Web)", "Backend (Web)" ]
     },
     {
         name: "Bootstrap",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png",
-        learning_type: "",
+        learning_type: "FIAP School - Programming Language (2º year of hight school)",
         used_for: [ "Frontend (Web)" ]
     },
     {
@@ -71,7 +71,7 @@ let languages: Array<langs> = [
     {
         name: "Mongo DB",
         logo: "Images/MongoDB_Logomark_SpringGreen.svg",
-        learning_type: "",
+        learning_type: "FIAP School - Programming Language (2º year of hight school)",
         used_for: ["Database"]
     }
     

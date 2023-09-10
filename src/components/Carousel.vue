@@ -4,10 +4,10 @@
             <button v-for="(slide, i) of carousel" type="button" :data-bs-target="'#carouselExampleCaptions' + carousel_id"
                 :data-bs-slide-to="i" :class="'text-bg-light ' + (i == 0 ? 'active' : '')" aria-current="true" aria-label="Slide 1"></button>
         </div>
-        <div class="carousel-inner" data-bs-toggle="modal" :data-bs-target="carousel_item_target">
-            <div v-for="(slide, i) of carousel" :class="'align-items-end carousel-item ' + (i == 0 ? 'active' : '')">
+        <div class="carousel-inner">
+            <div v-for="(slide, i) of carousel" :class="'align-items-end carousel-item ' + (i == 0 ? 'active' : '')" data-bs-toggle="modal" :data-bs-target="'#' + slide.carousel_item_target">
                 <div class="d-flex justify-content-center mb-5">
-                    <img :src="slide.image" class="img-size position-absolute" :alt="'Logo of ' + carousel">
+                    <img :src="slide.image" class="img-size position-absolute" :alt="'Logo of ' + slide.title">
                 </div>
                 <div style="top: -4.75rem;" class="carousel-caption text-light d-none d-md-block ">
                     <h3 class="text-center text-light">{{ slide.title }}</h3>
@@ -29,16 +29,15 @@
 <script lang="ts">
 
 export interface carousel {
-  
     title: string,
     subtitle: string,
     image: string,
+    carousel_item_target: String,
 }
 
 export default {
     props: {
         carousel_id: String,
-        carousel_item_target: String,
         carousel: {
             type: Array<carousel>,
 

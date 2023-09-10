@@ -89,6 +89,10 @@ $roxo_padrao: rgb(211, 126, 217);
     animation: neon_logo 2.7s infinite;
 }
 
+.max-width{
+    max-width: 50%;
+}
+
 @keyframes neon_logo {
     0%,
     100% {

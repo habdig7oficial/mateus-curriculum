@@ -26,6 +26,8 @@ let Areas: Array<string> = [
   "Game Development",
 ]
 
+type keys = "front" | "back"| "performance" | "db" | "game_dev"
+
 let carouselObj: carousels = { front: [], back: [], performance: [], db: [], game_dev: []}
 
 for (let i = 0; i < Languages.length; i++) {
@@ -35,6 +37,7 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
+      carousel_item_target: `front-${Languages[i].name}`
     })
   }
 
@@ -43,6 +46,7 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
+      carousel_item_target: `back-${Languages[i].name}`
     })
   }
 
@@ -51,6 +55,7 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
+      carousel_item_target: `db-${Languages[i].name}`
     })
   }
 
@@ -59,15 +64,19 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
+      carousel_item_target: `performance-${Languages[i].name}`
     })
   }
 
   if (Languages[i].used_for.includes("Game Development")) {
-    carouselObj.game_dev?.push({
+    if (Languages[i].name === "C#") {
+      carouselObj.game_dev?.push({
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
+      carousel_item_target:  `game_dev-c++++`
     })
+    }
   }
 
 }
@@ -83,7 +92,7 @@ let selected_area: Ref<number> = ref(0);
   <NavBar />
   <main class="text-bg-dark">
     <h1 class="text-center pt-3 neon-title">Mateus Vieira</h1>
-    <h4 class="text-center mb-5">Junior Analist</h4>
+    <h4 class="text-center mb-5">IT Junior Analist</h4>
 
     <!--
     <div class="my-5" style="max-width: 50%;">
@@ -101,41 +110,51 @@ let selected_area: Ref<number> = ref(0);
     <Transition name="slide-fade">
       <div v-show="selected_area == Areas.indexOf('Frontend (Web)')" id="langs">
         <div class="d-flex justify-content-center">
-          <Carousel carousel_item_target="#exampleModal" carousel_id="front" :carousel="carouselObj.front" />
+          <Carousel carousel_item_target="#1" carousel_id="front" :carousel="carouselObj.front" />
         </div>
       </div>
     </Transition>
     <Transition name="slide-fade">
-      <div v-show="selected_area == Areas.indexOf('Backend (Web)')" id="langs">
+      <div v-show="selected_area == Areas.indexOf('Backend (Web)')" id="langs1">
         <div class="d-flex justify-content-center">
           <Carousel carousel_id="back" :carousel="carouselObj.back" />
         </div>
       </div>
     </Transition>
     <Transition name="slide-fade">
-      <div v-show="selected_area == Areas.indexOf('Database')" id="langs">
+      <div v-show="selected_area == Areas.indexOf('Database')" id="langs2">
         <div class="d-flex justify-content-center">
           <Carousel carousel_id="database" :carousel="carouselObj.db" />
         </div>
       </div>
     </Transition>
     <Transition name="slide-fade">
-      <div v-show="selected_area == Areas.indexOf('High Performance Apps')" id="langs">
+      <div v-show="selected_area == Areas.indexOf('High Performance Apps')" id="langs3">
         <div class="d-flex justify-content-center">
           <Carousel carousel_id="performace" :carousel="carouselObj.performance" />
         </div>
       </div>
     </Transition>
     <Transition name="slide-fade">
-      <div v-show="selected_area == Areas.indexOf('Game Development')" id="langs">
+      <div v-show="selected_area == Areas.indexOf('Game Development')" id="langs4">
         <div class="d-flex justify-content-center">
           <Carousel carousel_id="game_dev" :carousel="carouselObj.game_dev" />
         </div>
       </div>
     </Transition>
 
-    <div>
-      <Modal v-for="(i) of carouselObj.front" title="teste" />
+    <p class="text-center text-muted">(click in the image too see more info)</p>
+
+    <div class="d-flex justify-content-center">
+      <p class="mt-5 mx-5 justify-content-center max-width text-wrap text-break">
+        I'm a student from Brazil intrested in all kinds of tecnologies. I'm attending at the technical course in FIAP School and making some other <a href="https://github.com/habdig7oficial?tab=repositories">intresting projects</a> by myself. 
+       
+     </p>
+    </div>
+
+    <div v-for="topic of Object.keys(carouselObj)">
+
+      <Modal v-for="(obj, index) of carouselObj[topic as keys]" :title="`${obj.title}`" body="Hello World" :topic="topic" :modal_id="obj.carousel_item_target.toString()"/>
     </div>
 
   </main>
