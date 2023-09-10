@@ -1,1 +1,0 @@
-habdig7oficial@pop-os.2

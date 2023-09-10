@@ -29,26 +29,26 @@ let languages: Array<langs> = [
         name: "Ruby",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/768px-Ruby_logo.svg.png",
         learning_type: "",
-        used_for: [ "Backend (Web)" ]
+        used_for: [ "Back-end (Web)" ]
     },
     {
         name: "TypeScript",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
         learning_type:  "FIAP School - Programming Language (3º year of hight school)",
-        used_for: [ "Frontend (Web)", "Backend (Web)" ]
+        used_for: [ "Front-end (Web)", "Back-end (Web)" ]
         
     },
     {
         name: "JavaScript",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
         learning_type: "FIAP School - Internet and Web & Programming Language (1º, 2º, 3º year of hight school)",
-        used_for: [ "Frontend (Web)", "Backend (Web)" ]
+        used_for: [ "Front-end (Web)", "Back-end (Web)" ]
     },
     {
         name: "Bootstrap",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png",
         learning_type: "FIAP School - Programming Language (2º year of hight school)",
-        used_for: [ "Frontend (Web)" ]
+        used_for: [ "Front-end (Web)" ]
     },
     {
         name: "Elixir",

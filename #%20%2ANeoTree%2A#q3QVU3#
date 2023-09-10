@@ -4,6 +4,17 @@
  node_modules/
  public/
  src/
+   assets/
+   components/
+   fake-api/
+   interfaces/
+   router/
+   views/
+     AboutView.vue
+     Index.html
+     NotFound.vue
+   App.vue
+   main.ts
  README.md
  env.d.ts
  index.html

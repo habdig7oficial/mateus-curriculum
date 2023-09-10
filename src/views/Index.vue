@@ -19,8 +19,8 @@ interface carousels {
 
 
 let Areas: Array<string> = [
-  "Frontend (Web)",
-  "Backend (Web)",
+  "Front-end (Web)",
+  "Back-end (Web)",
   "Database",
   "High Performance Apps",
   "Game Development",
@@ -32,7 +32,7 @@ let carouselObj: carousels = { front: [], back: [], performance: [], db: [], gam
 
 for (let i = 0; i < Languages.length; i++) {
   
-  if (Languages[i].used_for.includes("Frontend (Web)")) {
+  if (Languages[i].used_for.includes("Front-end (Web)")) {
     carouselObj.front?.push({
       title: Languages[i].name,
       subtitle: Languages[i].name,
@@ -41,7 +41,7 @@ for (let i = 0; i < Languages.length; i++) {
     })
   }
 
-  if (Languages[i].used_for.includes("Backend (Web)")) {
+  if (Languages[i].used_for.includes("Back-end (Web)")) {
     carouselObj.back?.push({
       title: Languages[i].name,
       subtitle: Languages[i].name,
@@ -108,14 +108,14 @@ let selected_area: Ref<number> = ref(0);
     </div>
 
     <Transition name="slide-fade">
-      <div v-show="selected_area == Areas.indexOf('Frontend (Web)')" id="langs">
+      <div v-show="selected_area == Areas.indexOf('Front-end (Web)')" id="langs">
         <div class="d-flex justify-content-center">
           <Carousel carousel_item_target="#1" carousel_id="front" :carousel="carouselObj.front" />
         </div>
       </div>
     </Transition>
     <Transition name="slide-fade">
-      <div v-show="selected_area == Areas.indexOf('Backend (Web)')" id="langs1">
+      <div v-show="selected_area == Areas.indexOf('Back-end (Web)')" id="langs1">
         <div class="d-flex justify-content-center">
           <Carousel carousel_id="back" :carousel="carouselObj.back" />
         </div>
