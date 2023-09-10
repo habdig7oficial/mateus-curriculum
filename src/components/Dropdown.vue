@@ -5,7 +5,7 @@
         </a>
 
         <ul class="dropdown-menu">
-            <li v-for="(sub, i) of opt"><router-link class="dropdown-item" :to="sub.to">{{ sub.title }}</router-link></li>
+            <li v-for="(sub, i) of opt"><a class="dropdown-item" target="_blank" :href="sub.to">{{ sub.title }}</a></li>
         </ul>
     </div>
 </template>

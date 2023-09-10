@@ -27,7 +27,7 @@ export default {
                             <a class="nav-link" href="#langs">My Knowloge</a>
                         </li>
                         <li class="nav-item">
-                          <Dropdown title="Download Curriculum" :opt="[{title: 'PDF', to: '/Documents/mateus_curriculum.pdf'}, {title: 'ODT', to: '/Documents/mateus_curriculum.odt'}]" />
+                          <Dropdown title="Download Curriculum" :opt="[{title: 'PDF', to: '/mateus-curriculum/Documents/mateus_curriculum.pdf'}, {title: 'ODT', to: '/mateus-curriculum/Documents/mateus_curriculum.odt'}]" />
                         </li>
                     </ul>
                 </div>

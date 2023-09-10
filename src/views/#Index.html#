@@ -19,8 +19,8 @@ interface carousels {
 
 
 let Areas: Array<string> = [
-  "Front-end (Web)",
-  "Back-end (Web)",
+  "Frontend (Web)",
+  "Backend (Web)",
   "Database",
   "High Performance Apps",
   "Game Development",
@@ -32,7 +32,7 @@ let carouselObj: carousels = { front: [], back: [], performance: [], db: [], gam
 
 for (let i = 0; i < Languages.length; i++) {
   
-  if (Languages[i].used_for.includes("Front-end (Web)")) {
+  if (Languages[i].used_for.includes("Frontend (Web)")) {
     carouselObj.front?.push({
       title: Languages[i].name,
       subtitle: Languages[i].name,
@@ -41,7 +41,7 @@ for (let i = 0; i < Languages.length; i++) {
     })
   }
 
-  if (Languages[i].used_for.includes("Back-end (Web)")) {
+  if (Languages[i].used_for.includes("Backend (Web)")) {
     carouselObj.back?.push({
       title: Languages[i].name,
       subtitle: Languages[i].name,
@@ -108,14 +108,14 @@ let selected_area: Ref<number> = ref(0);
     </div>
 
     <Transition name="slide-fade">
-      <div v-show="selected_area == Areas.indexOf('Front-end (Web)')" id="langs">
+      <div v-show="selected_area == Areas.indexOf('Frontend (Web)')" id="langs">
         <div class="d-flex justify-content-center">
           <Carousel carousel_item_target="#1" carousel_id="front" :carousel="carouselObj.front" />
         </div>
       </div>
     </Transition>
     <Transition name="slide-fade">
-      <div v-show="selected_area == Areas.indexOf('Back-end (Web)')" id="langs1">
+      <div v-show="selected_area == Areas.indexOf('Backend (Web)')" id="langs1">
         <div class="d-flex justify-content-center">
           <Carousel carousel_id="back" :carousel="carouselObj.back" />
         </div>
@@ -145,14 +145,11 @@ let selected_area: Ref<number> = ref(0);
 
     <p class="text-center text-muted">(click in the image too see more info)</p>
 
-    <div class="d-flex flex-column align-items-center justify-content-center">
+    <div class="d-flex justify-content-center">
       <p class="mt-5 mx-5 justify-content-center max-width text-wrap text-break">
-      	 I'm a student from Brazil interested in all kinds of technologies. I'm attending at the technical course in FIAP School and making some other <a href="https://github.com/habdig7oficial?tab=repositories">interesting projects</a> by myself.
+        I'm a student from Brazil intrested in all kinds of tecnologies. I'm attending at the technical course in FIAP School and making some other <a href="https://github.com/habdig7oficial?tab=repositories">intresting projects</a> by myself. 
+       
      </p>
-     
-      <p class="mt-5 mx-5 justify-content-center max-width text-wrap text-break">
-      	 My professional objective is practice and improve my knowledge of most diverse fields of technology, developing all kinds of apps
-     </p>    
     </div>
 
     <div v-for="topic of Object.keys(carouselObj)">

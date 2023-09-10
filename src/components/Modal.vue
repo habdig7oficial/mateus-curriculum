@@ -6,6 +6,9 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">{{ title }}</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
+		<h2 class="text-center mt-3">Frameworks </h2>
+
                 <div class="modal-body">
                     {{ topic == "front"? "teste123": body }}
                 </div>

@@ -35,7 +35,8 @@ let languages: Array<langs> = [
         name: "TypeScript",
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
         learning_type:  "FIAP School - Programming Language (3º year of hight school)",
-        used_for: [ "Front-end (Web)", "Back-end (Web)" ]
+        used_for: [ "Front-end (Web)", "Back-end (Web)" ],
+	impl: ["Node.js", "Deno"]
         
     },
     {
