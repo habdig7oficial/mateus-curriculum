@@ -35,9 +35,11 @@ for (let i = 0; i < Languages.length; i++) {
   if (Languages[i].used_for.includes("Front-end (Web)")) {
     carouselObj.front?.push({
       title: Languages[i].name,
-      subtitle: Languages[i].name,
+      subtitle: Languages[i].learning_type,
       image: Languages[i].logo,
-      carousel_item_target: `front-${Languages[i].name}`
+      carousel_item_target: `front-${Languages[i].name}`,
+      frameworks: Languages[i].frameworks,
+      score: Languages[i].score
     })
   }
 
@@ -46,7 +48,9 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
-      carousel_item_target: `back-${Languages[i].name}`
+      carousel_item_target: `back-${Languages[i].name}`,
+      frameworks: Languages[i].frameworks,
+      score: Languages[i].score
     })
   }
 
@@ -55,7 +59,9 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
-      carousel_item_target: `db-${Languages[i].name}`
+      carousel_item_target: `db-${Languages[i].name}`,
+      frameworks: Languages[i].frameworks,
+      score: Languages[i].score
     })
   }
 
@@ -64,7 +70,9 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
-      carousel_item_target: `performance-${Languages[i].name}`
+      carousel_item_target: `performance-${Languages[i].name}`,
+      frameworks: Languages[i].frameworks,
+      score: Languages[i].score
     })
   }
 
@@ -74,7 +82,9 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
-      carousel_item_target:  `game_dev-c++++`
+      carousel_item_target:  `game_dev-c++++`,
+      frameworks: Languages[i].frameworks,
+      score: Languages[i].score
     })
     }
   }
@@ -157,7 +167,7 @@ let selected_area: Ref<number> = ref(0);
 
     <div v-for="topic of Object.keys(carouselObj)">
 
-      <Modal v-for="(obj, index) of carouselObj[topic as keys]" :title="`${obj.title}`" body="Hello World" :topic="topic" :modal_id="obj.carousel_item_target.toString()"/>
+      <Modal v-for="(obj, index) of carouselObj[topic as keys]" :title="`${obj.title}`" body="Hello World" :score="obj.score" :frameworks="obj.frameworks" :topic="topic" :modal_id="obj.carousel_item_target.toString()"/>
     </div>
 
   </main>

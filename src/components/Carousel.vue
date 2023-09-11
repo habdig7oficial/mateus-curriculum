@@ -11,7 +11,7 @@
                 </div>
                 <div style="top: -4.75rem;" class="carousel-caption text-light d-none d-md-block ">
                     <h3 class="text-center text-light">{{ slide.title }}</h3>
-                    <p class="text-light">{{ slide.subtitle }}</p>
+                    <p class="text-light">knowledge level: <i v-for="(j,i) of slide.score" class="bi bi-star-fill mx-1 text-warning"></i></p>
                 </div>
             </div>
         </div>
@@ -27,12 +27,17 @@
 </template>
 
 <script lang="ts">
+import type { framework } from '@/interfaces/tech-interface';
+
 
 export interface carousel {
     title: string,
     subtitle: string,
     image: string,
     carousel_item_target: String,
+
+    frameworks?: Array<framework>,
+    score: number
 }
 
 export default {
