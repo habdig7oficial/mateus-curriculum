@@ -13,18 +13,20 @@
                     <ul class="d-flex justify-content-center" style="list-style: none;">
                         <li v-for="(framework, i) of frameworks">
                             <div class="card mx-3" style="width: 18rem;">
-                                <img class="card-img-top p-3" :src="framework.logo" alt="Card image cap">
+                                <img class="card-img-top p-3" :src="framework.logo" :alt="'Image of ' + framework.name + ' logo'">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ framework.name }}</h5>
-                                    <p class="card-text">{{ body }}</p>
-                                    <a href="#" class="btn btn-primary text-center">Go somewhere</a>
+                                    <h5 class="card-title text-center">{{ framework.name }}</h5>
+                                    <p class="text-muted text-center">(examples)</p>
+                                    <ul v-if="typeof framework.examples?.length == 'number' && framework.examples?.length > 0" class="d-flex justify-content-center">
+                                        <li v-for="ex of framework.examples" class="card-text"><a :href="ex.link">{{ ex.name }}</a></li>
+                                    </ul>
+                                    <p v-else class="text-center">(no public examples found)</p>
+                                    <!--<a href="#" class="btn btn-primary text-center">Go somewhere</a>-->
                                 </div>
                             </div>
                         </li>
 
                     </ul>
-
-                    <h2 class="text-center mt-3"> Implementations </h2>
                 </div>
 
 
@@ -40,7 +42,7 @@
 </template>
 
 <script lang="ts">
-import Teste from "./Card.vue"
+//import Teste from "./Card.vue"
 import type { impl, framework } from '@/interfaces/tech-interface';
 
 export default {
@@ -55,7 +57,6 @@ export default {
     },
     components: {
         // CardV
-        Teste
     },
     mounted: function () {
         console.log(this.frameworks)

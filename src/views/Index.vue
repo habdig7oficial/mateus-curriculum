@@ -37,7 +37,7 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].learning_type,
       image: Languages[i].logo,
-      carousel_item_target: `front-${Languages[i].name}`,
+      carousel_item_target: `front-${Languages[i].nickname || Languages[i].name}`,
       frameworks: Languages[i].frameworks,
       score: Languages[i].score,
       learning_type: Languages[i].learning_type
@@ -49,7 +49,7 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
-      carousel_item_target: `back-${Languages[i].name}`,
+      carousel_item_target: `back-${Languages[i].nickname || Languages[i].name}`,
       frameworks: Languages[i].frameworks,
       score: Languages[i].score,
       learning_type: Languages[i].learning_type
@@ -61,7 +61,7 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
-      carousel_item_target: `db-${Languages[i].name}`,
+      carousel_item_target: `db-${Languages[i].nickname || Languages[i].name}`,
       frameworks: Languages[i].frameworks,
       score: Languages[i].score,
       learning_type: Languages[i].learning_type
@@ -73,7 +73,7 @@ for (let i = 0; i < Languages.length; i++) {
       title: Languages[i].name,
       subtitle: Languages[i].name,
       image: Languages[i].logo,
-      carousel_item_target: `performance-${Languages[i].name}`,
+      carousel_item_target: `performance-${Languages[i].nickname || Languages[i].name}`,
       frameworks: Languages[i].frameworks,
       score: Languages[i].score,
       learning_type: Languages[i].learning_type
@@ -86,7 +86,7 @@ for (let i = 0; i < Languages.length; i++) {
         title: Languages[i].name,
         subtitle: Languages[i].name,
         image: Languages[i].logo,
-        carousel_item_target: `game_dev-c++++`,
+        carousel_item_target: `game_dev-${Languages[i].nickname || Languages[i].name}`,
         frameworks: Languages[i].frameworks,
         score: Languages[i].score,
         learning_type: Languages[i].learning_type
@@ -113,7 +113,7 @@ let selected_area: Ref<number> = ref(0);
 
     <ul class="d-flex justify-content-center">
       <li class="neon-subtitle">
-        <p class="h4">FIAP School - technical course </p>
+        <p class="h4">FIAP School - technical high school (2021-2023)</p>
       </li>
     </ul>
 
@@ -121,7 +121,7 @@ let selected_area: Ref<number> = ref(0);
 
     </div>
 
-    <h3 class="my-5 text-center"> Tecnologies that I use: </h3>
+    <h3 class="my-5 text-center"> Technologies that I use: </h3>
 
     <div class="d-flex my-5 justify-content-center flex-wrap">
       <a v-for="(area, i) of Areas" @click="selected_area = i; console.log(i)"
@@ -184,6 +184,28 @@ let selected_area: Ref<number> = ref(0);
         Practice and improve my knowledge of most diverse fields of technology, developing
         all kinds of apps
       </p>
+
+
+      <h3 class="text-center mt-5">Idioms that I speak </h3>
+
+      <ul>
+        <li>English <span class="text-muted">(medium)</span></li>
+
+        <li>Portuguese <span class="text-muted">(fluent) [native language]</span></li>
+
+        <li>Spanish <span class="text-muted">(basic)</span> </li>
+      </ul>
+
+      <h3 class="text-center mt-5 mb-3"> My Top Projects:</h3>
+
+      <ul class="list-group my-3">
+        <li class="list-group-item py-2"><i class="bi bi-award-fill text-warning"></i> <a target="_blank" href="https://github.com/MedTempo/MedTempo-Ruby-Backend.git">MedTempo Back-end <span class="text-muted">(Final Paper)</span></a> - Write in Ruby with Sinatra</li>
+
+        <li class="list-group-item py-2"><i class="bi bi-award-fill"></i> <a target="_blank" href="https://github.com/habdig7oficial/Reddito.git">Reddito <span class="text-muted">(2ºyear project)</span></a> - Write in TypeScript (node) with Express</li>
+
+        <li class="list-group-item py-2" ><i style="color: #CD7F32;" class="bi bi-award-fill"></i> <a target="_blank" href="https://github.com/habdig7oficial/Rime.git">Rime Cryptography Algorithm demo <span class="text-muted">(2ºyear project)</span></a> - Write with JavaScript (Deno) </li>
+      </ul>
+
     </div>
 
     <div v-for="topic of Object.keys(carouselObj)">

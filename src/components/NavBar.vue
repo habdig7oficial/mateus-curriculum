@@ -27,7 +27,7 @@ export default {
                             <a class="nav-link" href="#langs">My Knowloge</a>
                         </li>
                         <li class="nav-item">
-                          <Dropdown title="Download Curriculum" :opt="[{title: 'PDF', to: '/mateus-curriculum/Documents/mateus_curriculum.pdf'}, {title: 'ODT', to: '/mateus-curriculum/Documents/mateus_curriculum.odt'}]" />
+                          <Dropdown title="Download Curriculum" :opt="[{title: 'PDF', to: '/mateus-curriculum/Documents/mateus_curriculum.pdf'}, {title: 'ODT', to: '/mateus-curriculum/Documents/mateus_curriculum.odt'}, {title: 'Src', to: 'https://github.com/habdig7oficial/mateus-curriculum.git' }]" />
                         </li>
                     </ul>
                 </div>
