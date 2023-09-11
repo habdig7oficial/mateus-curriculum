@@ -37,7 +37,8 @@ export interface carousel {
     carousel_item_target: String,
 
     frameworks?: Array<framework>,
-    score: number
+    score: number,
+    learning_type?: string
 }
 
 export default {

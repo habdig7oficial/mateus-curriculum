@@ -8,6 +8,7 @@ export interface impl {
 export interface framework {
     name: string
     logo: string
+    isfront?: boolean
 }
 
 export default interface tecnologies {
@@ -15,7 +16,7 @@ export default interface tecnologies {
     logo: string, 
     learning_type: string,
     used_for: Array<uses>,
-    frameworks?: Array<impl>,
+    frameworks?: Array<framework>,
     impl?: Array<impl>,
-    score: 1 | 2 | 3 | 4 | 5
+    score: 1 | 2 | 3 | 4 | 5,
 }

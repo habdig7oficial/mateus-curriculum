@@ -39,7 +39,8 @@ for (let i = 0; i < Languages.length; i++) {
       image: Languages[i].logo,
       carousel_item_target: `front-${Languages[i].name}`,
       frameworks: Languages[i].frameworks,
-      score: Languages[i].score
+      score: Languages[i].score,
+      learning_type: Languages[i].learning_type
     })
   }
 
@@ -50,7 +51,8 @@ for (let i = 0; i < Languages.length; i++) {
       image: Languages[i].logo,
       carousel_item_target: `back-${Languages[i].name}`,
       frameworks: Languages[i].frameworks,
-      score: Languages[i].score
+      score: Languages[i].score,
+      learning_type: Languages[i].learning_type
     })
   }
 
@@ -61,7 +63,8 @@ for (let i = 0; i < Languages.length; i++) {
       image: Languages[i].logo,
       carousel_item_target: `db-${Languages[i].name}`,
       frameworks: Languages[i].frameworks,
-      score: Languages[i].score
+      score: Languages[i].score,
+      learning_type: Languages[i].learning_type
     })
   }
 
@@ -72,7 +75,8 @@ for (let i = 0; i < Languages.length; i++) {
       image: Languages[i].logo,
       carousel_item_target: `performance-${Languages[i].name}`,
       frameworks: Languages[i].frameworks,
-      score: Languages[i].score
+      score: Languages[i].score,
+      learning_type: Languages[i].learning_type
     })
   }
 
@@ -84,7 +88,8 @@ for (let i = 0; i < Languages.length; i++) {
         image: Languages[i].logo,
         carousel_item_target: `game_dev-c++++`,
         frameworks: Languages[i].frameworks,
-        score: Languages[i].score
+        score: Languages[i].score,
+        learning_type: Languages[i].learning_type
       })
     }
   }
@@ -183,7 +188,7 @@ let selected_area: Ref<number> = ref(0);
 
     <div v-for="topic of Object.keys(carouselObj)">
 
-      <Modal v-for="(obj, index) of carouselObj[topic as keys]" :title="`${obj.title}`" body="Hello World"
+      <Modal v-for="(obj, index) of carouselObj[topic as keys]" :title="`${obj.title}`" :body="obj.learning_type"
         :score="obj.score" :frameworks="obj.frameworks" :topic="topic" :modal_id="obj.carousel_item_target.toString()" />
     </div>
 

@@ -1,7 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 $black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
@@ -24,6 +24,11 @@ $azul_var:rgb(61, 252, 240);
 
 $roxo_padrao: rgb(211, 126, 217); 
 */
+
+p {
+    font-family: 'Roboto', cursive;
+}
+
 .img-size {
     width: 306px;
 }

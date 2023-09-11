@@ -3,22 +3,29 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{ title }} <i v-for="(j,i) of score" class="bi bi-star-fill mx-1 text-warning"></i></h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{ title }} <i v-for="(j, i) of score"
+                            class="bi bi-star-fill mx-1 text-warning"></i></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-                <h2 class="text-center mt-3">Frameworks </h2>
-
                 <div class="modal-body">
-                    {{ topic == "front" ? "teste123" : body }}
+                    <h2 v-if="frameworks?.length != undefined && frameworks.length > 0" class="text-center mb-5"> Frameworks </h2>
 
-                    <ul style="list-style: none;">
+                    <ul class="d-flex justify-content-center" style="list-style: none;">
                         <li v-for="(framework, i) of frameworks">
-                            <!--<Card />-->
+                            <div class="card mx-3" style="width: 18rem;">
+                                <img class="card-img-top p-3" :src="framework.logo" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ framework.name }}</h5>
+                                    <p class="card-text">{{ body }}</p>
+                                    <a href="#" class="btn btn-primary text-center">Go somewhere</a>
+                                </div>
+                            </div>
                         </li>
-                    </ul>
-                </div>
 
+                    </ul>
+
+                    <h2 class="text-center mt-3"> Implementations </h2>
+                </div>
 
 
                 <!--
@@ -33,7 +40,7 @@
 </template>
 
 <script lang="ts">
-//import Card from "@/components/Card.vue"
+import Teste from "./Card.vue"
 import type { impl, framework } from '@/interfaces/tech-interface';
 
 export default {
@@ -47,7 +54,11 @@ export default {
         score: Number
     },
     components: {
-        //Card
+        // CardV
+        Teste
+    },
+    mounted: function () {
+        console.log(this.frameworks)
     }
 }
 </script>
