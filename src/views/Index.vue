@@ -13,8 +13,8 @@ interface carousels {
   front: Array<carousel>,
   back: Array<carousel>,
   performance: Array<carousel>,
-  db: Array<carousel>,  
-  game_dev: Array<carousel>,  
+  db: Array<carousel>,
+  game_dev: Array<carousel>,
 }
 
 
@@ -26,12 +26,12 @@ let Areas: Array<string> = [
   "Game Development",
 ]
 
-type keys = "front" | "back"| "performance" | "db" | "game_dev"
+type keys = "front" | "back" | "performance" | "db" | "game_dev"
 
-let carouselObj: carousels = { front: [], back: [], performance: [], db: [], game_dev: []}
+let carouselObj: carousels = { front: [], back: [], performance: [], db: [], game_dev: [] }
 
 for (let i = 0; i < Languages.length; i++) {
-  
+
   if (Languages[i].used_for.includes("Front-end (Web)")) {
     carouselObj.front?.push({
       title: Languages[i].name,
@@ -79,13 +79,13 @@ for (let i = 0; i < Languages.length; i++) {
   if (Languages[i].used_for.includes("Game Development")) {
     if (Languages[i].name === "C#") {
       carouselObj.game_dev?.push({
-      title: Languages[i].name,
-      subtitle: Languages[i].name,
-      image: Languages[i].logo,
-      carousel_item_target:  `game_dev-c++++`,
-      frameworks: Languages[i].frameworks,
-      score: Languages[i].score
-    })
+        title: Languages[i].name,
+        subtitle: Languages[i].name,
+        image: Languages[i].logo,
+        carousel_item_target: `game_dev-c++++`,
+        frameworks: Languages[i].frameworks,
+        score: Languages[i].score
+      })
     }
   }
 
@@ -104,13 +104,19 @@ let selected_area: Ref<number> = ref(0);
     <h1 class="text-center pt-3 neon-title">Mateus Vieira</h1>
     <h4 class="text-center mb-5">Junior Software Analyst</h4>
 
-    <!--
-    <div class="my-5" style="max-width: 50%;">
-      <Acordion />
-    </div>
-  -->
+    <h3 class="my-5 text-center"> Professional Qualification: </h3>
 
-  <h3 class="my-5 text-center"> Tecnologies that I use: </h3>
+    <ul class="d-flex justify-content-center">
+      <li class="neon-subtitle">
+        <p class="h4">FIAP School - technical course </p>
+      </li>
+    </ul>
+
+    <div class="mx-1 spacer">
+
+    </div>
+
+    <h3 class="my-5 text-center"> Tecnologies that I use: </h3>
 
     <div class="d-flex my-5 justify-content-center flex-wrap">
       <a v-for="(area, i) of Areas" @click="selected_area = i; console.log(i)"
@@ -155,20 +161,33 @@ let selected_area: Ref<number> = ref(0);
 
     <p class="text-center text-muted">(click in the image too see more info)</p>
 
+
+    <div class="mx-1 spacer">
+
+    </div>
+
     <div class="d-flex flex-column align-items-center justify-content-center">
       <p class="mt-5 mx-5 justify-content-center max-width text-wrap text-break">
-      	 I'm a student from Brazil interested in all kinds of technologies. I'm attending at the technical course in FIAP School and making some other <a href="https://github.com/habdig7oficial?tab=repositories">interesting projects</a> by myself.
-     </p>
-     
-      <p class="mt-5 mx-5 justify-content-center max-width text-wrap text-break">
-      	 My professional objective is practice and improve my knowledge of most diverse fields of technology, developing all kinds of apps
-     </p>    
+        I'm a student from Brazil interested in all kinds of technologies. I'm attending at the technical course in FIAP
+        School and making some other <a href="https://github.com/habdig7oficial?tab=repositories">interesting projects</a>
+        by myself.
+      </p>
+
+      <h3 class="text-center mt-5">Professional objective</h3>
+
+      <p class="mt-2 mx-5 justify-content-center max-width text-wrap text-break">
+        Practice and improve my knowledge of most diverse fields of technology, developing
+        all kinds of apps
+      </p>
     </div>
 
     <div v-for="topic of Object.keys(carouselObj)">
 
-      <Modal v-for="(obj, index) of carouselObj[topic as keys]" :title="`${obj.title}`" body="Hello World" :score="obj.score" :frameworks="obj.frameworks" :topic="topic" :modal_id="obj.carousel_item_target.toString()"/>
+      <Modal v-for="(obj, index) of carouselObj[topic as keys]" :title="`${obj.title}`" body="Hello World"
+        :score="obj.score" :frameworks="obj.frameworks" :topic="topic" :modal_id="obj.carousel_item_target.toString()" />
     </div>
+
+
 
   </main>
 

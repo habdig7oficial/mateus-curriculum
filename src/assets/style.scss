@@ -1,6 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-@import "https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Ubuntu&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
 
 $black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
@@ -8,6 +9,7 @@ $white: rgb(255, 255, 255);
 $default_pink: rgb(247, 40, 175);
 $var_pink: rgb(199, 74, 155);
 $var2_pink: rgb(201, 28, 141);
+$var_green: rgb(44, 242, 130);
 
 $fonts: "Ubuntu", cursive;
 
@@ -89,8 +91,18 @@ $roxo_padrao: rgb(211, 126, 217);
     animation: neon_logo 2.7s infinite;
 }
 
+.neon-subtitle {
+    font-family: $fonts;
+    color: $var_green;
+}
+
 .max-width{
     max-width: 50%;
+}
+
+.spacer{
+    border-top: 0.5em dotted $var_green;
+    /*max-width: 50%;*/
 }
 
 @keyframes neon_logo {
