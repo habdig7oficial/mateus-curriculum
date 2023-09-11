@@ -137,17 +137,6 @@ let languages: Array<langs> = [
                 isfront: true
             },
             {
-                name: "Angular",
-                logo: "https://angular.io/assets/images/logos/angular/angular.svg",
-                examples: [
-                    {
-                        name: "(no examples in js please check TypeScript session)",
-                        link: "https://github.com/habdig7oficial/AT-alex-animais.git"
-                    }
-                ],
-                isfront: true
-            },
-            {
                 name: "React",
                 logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
                 examples: [

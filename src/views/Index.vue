@@ -196,14 +196,33 @@ let selected_area: Ref<number> = ref(0);
         <li>Spanish <span class="text-muted">(basic)</span> </li>
       </ul>
 
+
+      <h3 class="text-center mt-5 mb-3"> Other Competencies </h3>
+
+      <ul>
+        <li>Agile development of software</li>
+
+        <li>Software development oriented by UML diagrams</li>
+
+        <li>Unix/Linux Configuration</li>
+
+        <li>Leadership (basic) [3º year classroom representative 2023]</li>
+      </ul>
+
       <h3 class="text-center mt-5 mb-3"> My Top Projects:</h3>
 
       <ul class="list-group my-3">
-        <li class="list-group-item py-2"><i class="bi bi-award-fill text-warning"></i> <a target="_blank" href="https://github.com/MedTempo/MedTempo-Ruby-Backend.git">MedTempo Back-end <span class="text-muted">(Final Paper)</span></a> - Write in Ruby with Sinatra</li>
+        <li class="list-group-item py-2"><i class="bi bi-award-fill text-warning"></i> <a target="_blank"
+            href="https://github.com/MedTempo/MedTempo-Ruby-Backend.git">MedTempo Back-end <span class="text-muted">(Final
+              Paper)</span></a> - Write in Ruby with Sinatra</li>
 
-        <li class="list-group-item py-2"><i class="bi bi-award-fill"></i> <a target="_blank" href="https://github.com/habdig7oficial/Reddito.git">Reddito <span class="text-muted">(2ºyear project)</span></a> - Write in TypeScript (node) with Express</li>
+        <li class="list-group-item py-2"><i class="bi bi-award-fill"></i> <a target="_blank"
+            href="https://github.com/habdig7oficial/Reddito.git">Reddito <span class="text-muted">(2ºyear
+              project)</span></a> - Write in TypeScript (node) with Express</li>
 
-        <li class="list-group-item py-2" ><i style="color: #CD7F32;" class="bi bi-award-fill"></i> <a target="_blank" href="https://github.com/habdig7oficial/Rime.git">Rime Cryptography Algorithm demo <span class="text-muted">(2ºyear project)</span></a> - Write with JavaScript (Deno) </li>
+        <li class="list-group-item py-2"><i style="color: #CD7F32;" class="bi bi-award-fill"></i> <a target="_blank"
+            href="https://github.com/habdig7oficial/Rime.git">Rime Cryptography Algorithm demo <span
+              class="text-muted">(2ºyear project)</span></a> - Write with JavaScript (Deno) </li>
       </ul>
 
     </div>
@@ -216,7 +235,6 @@ let selected_area: Ref<number> = ref(0);
 
 
 
-  </main>
+</main>
 
-  <Footer />
-</template>
+<Footer /></template>
