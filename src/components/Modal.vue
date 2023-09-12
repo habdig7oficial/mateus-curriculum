@@ -20,9 +20,6 @@
                                     <ul v-if="typeof framework.examples?.length == 'number' && framework.examples?.length > 0" class="d-flex justify-content-center align-items-center flex-column">
                                         <li v-for="ex of framework.examples" class="card-text"><a :href="ex.link">{{ ex.name }}</a></li>
                                     </ul>
-                                    <ul v-else-if="false">
-
-                                    </ul>
                                     <p v-else class="text-center">(no public examples found)</p>
                                     <!--<a href="#" class="btn btn-primary text-center">Go somewhere</a>-->
                                 </div>
