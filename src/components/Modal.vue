@@ -10,7 +10,7 @@
                 <div class="modal-body">
                     <h2 v-if="frameworks?.length != undefined && frameworks.length > 0" class="text-center mb-5"> Frameworks </h2>
 
-                    <ul class="d-flex justify-content-center" style="list-style: none;">
+                    <ul v-if="typeof frameworks != 'undefined' && frameworks?.length > 0" class="d-flex justify-content-center" style="list-style: none;">
                         <li v-for="(framework, i) of frameworks">
                             <div class="card mx-3" style="width: 18rem;">
                                 <img style="max-height: 20rem;" class="card-img-top p-3 mx-auto" :src="framework.logo" :alt="'Image of ' + framework.name + ' logo'">
@@ -29,6 +29,7 @@
                             </div>
                         </li>
                     </ul>
+                    <p v-else class="text-center text-muted">(I don’t know YET any framework on this language)</p>
 
                     <div class="mx-1 spacer my-4"></div>
 

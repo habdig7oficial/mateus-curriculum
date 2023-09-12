@@ -195,10 +195,16 @@ let languages: Array<langs> = [
         learning_type: "FIAP School - Programming Language (2º year of hight school)",
         used_for: ["Front-end (Web)"],
         score: 5,
-        examples: [
+        frameworks:[
             {
-                name: "This Site :)",
-                link: "https://github.com/habdig7oficial/mateus-curriculum.git"
+                name: "Bootstrap + CSS",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png",
+                examples: [
+                    {
+                        name: "This Site :)",
+                        link: "https://github.com/habdig7oficial/mateus-curriculum.git"
+                    }
+                ]
             }
         ]
     },
