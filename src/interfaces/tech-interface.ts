@@ -1,4 +1,4 @@
-export type uses = "Front-end (Web)" | "Back-end (Web)" | "Database" | "High Performance Apps" | "Game Development"
+export type uses = "Front-end (Web)" | "Back-end (Web)" | "Database" | "High Performance Apps" | "Game Development" | "System Administration"
 
 export interface impl {
     name: string

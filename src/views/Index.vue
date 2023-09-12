@@ -15,6 +15,7 @@ interface carousels {
   performance: Array<carousel>,
   db: Array<carousel>,
   game_dev: Array<carousel>,
+  sys_adm: Array<carousel>
 }
 
 
@@ -24,11 +25,12 @@ let Areas: Array<string> = [
   "Database",
   "High Performance Apps",
   "Game Development",
+  "System Administration"
 ]
 
-type keys = "front" | "back" | "performance" | "db" | "game_dev"
+type keys = "front" | "back" | "performance" | "db" | "game_dev" | "sys_adm"
 
-let carouselObj: carousels = { front: [], back: [], performance: [], db: [], game_dev: [] }
+let carouselObj: carousels = { front: [], back: [], performance: [], db: [], game_dev: [], sys_adm: [] }
 
 for (let i = 0; i < Languages.length; i++) {
 
@@ -92,6 +94,18 @@ for (let i = 0; i < Languages.length; i++) {
         learning_type: Languages[i].learning_type
       })
     }
+  }
+
+  if (Languages[i].used_for.includes("System Administration")) {
+    carouselObj.sys_adm?.push({
+      title: Languages[i].name,
+      subtitle: Languages[i].name,
+      image: Languages[i].logo,
+      carousel_item_target: `sys_adm-${Languages[i].nickname || Languages[i].name}`,
+      frameworks: Languages[i].frameworks,
+      score: Languages[i].score,
+      learning_type: Languages[i].learning_type
+    })
   }
 
 }
@@ -163,6 +177,14 @@ let selected_area: Ref<number> = ref(0);
         </div>
       </div>
     </Transition>
+    <Transition name="slide-fade">
+      <div v-show="selected_area == Areas.indexOf('System Administration')" id="langs4">
+        <div class="d-flex justify-content-center">
+          <Carousel carousel_id="sys_adm" :carousel="carouselObj.sys_adm" />
+        </div>
+      </div>
+    </Transition>
+
 
     <p class="text-center text-muted">(click in the image too see more info)</p>
 

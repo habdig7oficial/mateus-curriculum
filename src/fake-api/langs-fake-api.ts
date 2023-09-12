@@ -279,6 +279,30 @@ let languages: Array<langs> = [
         ],
         score: 3,
         nickname: "mongo"
+    },
+    {
+        name: "Docker",
+        logo: "https://www.docker.com/wp-content/uploads/2023/08/logo-guide-logos-1.svg",
+        learning_type: "informal learning",
+        used_for: ["System Administration"], 
+        frameworks: [
+            {
+                name: "Dockerfile",
+                logo: "https://www.docker.com/wp-content/uploads/2023/08/logo-guide-logos-1.svg",
+                examples: [
+                    {
+                        name: "MedTempo Back-end",
+                        link: "https://github.com/MedTempo/MedTempo-Ruby-Backend.git"
+                    },
+                    {
+                        name: "Floriculture (2º year)",
+                        link: "https://github.com/habdig7oficial/Floricultura/tree/ts"
+                    },
+                ]
+            }
+        ],
+        score: 4,
+        nickname: "docker"
     }
 
 ]
