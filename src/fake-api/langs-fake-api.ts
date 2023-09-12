@@ -194,13 +194,26 @@ let languages: Array<langs> = [
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png",
         learning_type: "FIAP School - Programming Language (2º year of hight school)",
         used_for: ["Front-end (Web)"],
-        score: 5
+        score: 5,
+        examples: [
+            {
+                name: "This Site :)",
+                link: "https://github.com/habdig7oficial/mateus-curriculum.git"
+            }
+        ]
     },
     {
         name: "Elixir",
         logo: "https://cdn.icon-icons.com/icons2/2699/PNG/512/elixir_lang_logo_icon_169207.png",
         learning_type: "informal learning",
         used_for: ["Back-end (Web)"],
+        frameworks: [
+            {
+                name: "Plug + Cowboy",
+                logo: "https://ninenines.eu/img/projects/cowboy-home.png",
+
+            }
+        ],
         score: 3
     },
     {
@@ -208,6 +221,18 @@ let languages: Array<langs> = [
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png",
         learning_type: "informal learning",
         used_for: ["Database"],
+        frameworks:[
+            {
+                name: "Go database/sql + Go pq",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png",
+                examples:[
+                    {
+                        name: "TCC-Concept-Teste",
+                        link: "https://github.com/habdig7oficial/TCC-Concept-Teste.git"
+                    }
+                ]
+            }
+        ],
         score: 4
     },
     {
@@ -215,6 +240,18 @@ let languages: Array<langs> = [
         logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/2560px-Cassandra_logo.svg.png",
         learning_type: "informal learning",
         used_for: ["Database"],
+        frameworks:[
+            {
+                name: "Stargate Graphql API",
+                logo: "https://stargate.io/assets/images/stargate-profile.png",
+                examples: [
+                    {
+                        name: "MedTempo Back-end",
+                        link: "https://github.com/MedTempo/MedTempo-Ruby-Backend.git"
+                    }
+                ]
+            }
+        ],
         score: 3
     },
     {
@@ -225,16 +262,17 @@ let languages: Array<langs> = [
         frameworks: [
             {
                 name: "Mongoose (node.js)",
-                logo: "",
+                logo: "Images/MongoDB_Logomark_SpringGreen.svg",
                 examples: [
                     {
-                        name: "",
-                        link: ""
+                        name: "Reddito",
+                        link: "https://github.com/habdig7oficial/Reddito.git"
                     }
                 ]
             }
         ],
-        score: 3
+        score: 3,
+        nickname: "mongo"
     }
 
 ]

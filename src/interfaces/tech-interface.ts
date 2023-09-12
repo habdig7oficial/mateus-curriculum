@@ -26,5 +26,6 @@ export default interface tecnologies {
     //impl?: Array<impl>,
     score: 1 | 2 | 3 | 4 | 5,
 
-    nickname?: string
+    nickname?: string,
+    examples?: Array<basic>
 }
