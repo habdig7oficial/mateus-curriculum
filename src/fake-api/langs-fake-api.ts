@@ -3,7 +3,7 @@ import type langs from "../interfaces/tech-interface";
 let languages: Array<langs> = [
     {
         name: "D",
-        logo: "/mateus-curriculum/Images/Clojure_logo.svg",
+        logo: "/mateus-curriculum/Images/D_Programming_Language_logo.svg",
         learning_type: "informal learning",
         used_for: ["High Performance Apps"],
         score: 4,
