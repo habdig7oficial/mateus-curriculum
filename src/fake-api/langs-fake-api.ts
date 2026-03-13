@@ -3,7 +3,7 @@ import type langs from "../interfaces/tech-interface";
 let languages: Array<langs> = [
     {
         name: "D",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/D_Programming_Language_logo.svg/2560px-D_Programming_Language_logo.svg.png",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/D_Programming_Language_logo.svg",
         learning_type: "informal learning",
         used_for: ["High Performance Apps"],
         score: 4,
@@ -43,7 +43,7 @@ let languages: Array<langs> = [
     },
     {
         name: "Clojure",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg",
+        logo: "/mateus-curriculum/Images/Clojure_logo.svg",
         learning_type: "informal learning",
         used_for: [],
         score: 2
