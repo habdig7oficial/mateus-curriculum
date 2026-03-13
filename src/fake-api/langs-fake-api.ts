@@ -3,7 +3,7 @@ import type langs from "../interfaces/tech-interface";
 let languages: Array<langs> = [
     {
         name: "D",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/D_Programming_Language_logo.svg",
+        logo: "/mateus-curriculum/Images/Clojure_logo.svg",
         learning_type: "informal learning",
         used_for: ["High Performance Apps"],
         score: 4,
@@ -16,21 +16,21 @@ let languages: Array<langs> = [
     },
     {
         name: "C++",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        logo: "/mateus-curriculum/Images/CPP_Logo.svg",
         learning_type: "informal learning",
         used_for: ["High Performance Apps"],
         score: 3, 
     },
     {
         name: "C#",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+        logo: "C_sharp_Logo.svg",
         learning_type: "FIAP School - Programming Language & Game Developement (1º and 3º year of hight school)",
         used_for: ["Game Development"],
         score: 2,
         frameworks: [
             {
                 name: "Unity",
-                logo: "/mateus-curriculum/Images/unity-logo.svg",
+                logo: "/mateus-curriculum/Images/mateus-curriculum/Images/unity-logo.svg",
                 examples: [
                     {
                         name: "Pong Plus Puls (Modified Version of Classical Pong)",
